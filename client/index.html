@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<title>Inventaire Maison Lenoblet | Shado inventory</title>
+		<script src="client_script.js"></script>
+	</head>
+	<body>
+		<div class="center title">Boutique l'écu d'étoffe</div>
+		<br />
+		<div id="header">
+			<input id="search_input" type="text" placeholder="Rechercher par nom, quantité, prix, artiste, description ou ID de l'article..." />
+			<input id="search_button" type="button" value="Rechercher" class="blue2" OnClick="search();" />
+			<input id="add_button" type="button" value="Ajouter" OnClick="toggleDiv('add_item'); hideDiv('search_result'); hideDiv('settings');" class="blue3" />
+			<input id="set_button" type="button" value="Paramètre" OnClick="toggleDiv('settings'); hideDiv('search_result'); hideDiv('add_item');" class="blue4" />
+		</div>
+		<br />
+		<div id="message">
+			Error message here...
+		</div>
+		<div id="add_item">
+			<img src="minus.svg" alt="Cahcher" title="Cacher" class="hideImg" width="50" OnClick="hideDiv('add_item');" />
+			<br />
+			<table>
+				<tr>
+					<td>Nom de l'article:</td>
+					<td><input id="article_name" class="cool_input" type="text" placeholder="Entrez le nom de l'article" /></td>
+				</tr>
+				<tr>
+					<td>Prix chaque:</td>
+					<td><input id="article_price" class="cool_input" type="number" placeholder="Entrez le prix de l'article" /></td>
+					<td>$</td>
+				</tr>
+				<tr>
+					<td>Quantité:</td>
+					<td><input id="article_quantity" class="cool_input" type="number" placeholder="Entrez la quantité" /></td>
+				</tr>
+				<tr>
+					<td>Artiste:</td>
+					<td><input id="article_artiste" class="cool_input" type="text" placeholder="Entrez le nom de l'artiste" /></td>
+				</tr>
+				<tr>
+					<td>Description:</td>
+					<td><input id="article_description" class="cool_input" type="text" placeholder="Description..." /></td>
+				</tr>
+			</table>
+			<br />
+			<input id="add_item_button" type="button" value="Ajouter" OnClick="addItem();" class="blue3" />
+		</div>
+		<div id="search_result">
+			Search results here
+		</div>
+		<div id="settings">
+			<h2>Modifier l'affichage des tableaux</h2>
+			<input id="show_articles" type="checkbox" checked="checked" OnChange="showAllData();" /> Nom de l'article
+				<br />
+			<input id="show_quantity" type="checkbox" checked="checked" OnChange="showAllData();" /> Quantité
+				<br />
+			<input id="show_price" type="checkbox" checked="checked" OnChange="showAllData();" /> Prix chaque 
+				<br />
+			<input id="show_totalPrice" type="checkbox" OnChange="showAllData();" /> total de chaque article
+				<br />
+			<input id="show_artiste" type="checkbox" checked="checked" OnChange="showAllData();" /> Nom de l'artiste
+				<br />
+			<input id="show_date" type="checkbox" OnChange="showAllData();" /> Date d'ajout
+				<br />
+			<input id="show_id" type="checkbox" OnChange="showAllData();" /> ID de l'article
+				<br />
+			<input id="show_description" type="checkbox" checked="checked" OnChange="showAllData();" /> Description
+				<br />
+			<input id="show_options" type="checkbox" checked="checked" OnChange="showAllData();" /> Options
+				<br />
+		</div>
+		<br />
+		<div>
+			<div class="navigator">
+				<input type="button" value="Tous les articles" id="all_articles_button" class="tab_btn" OnClick="openTab('all_articles');" />
+				<input type="button" value="Articles vendus" id="sold_articles_button" class="tab_btn" OnClick="openTab('sold_articles');" />
+			</div>
+			<br />
+			<div class="tab" id="all_articles">
+			</div>
+			<div class="tab" id="sold_articles">
+			</div>
+		</div>
+		<br />
+		<br />
+		<div class="center">
+			&copy; Shadi Jiha | All rights reserved (This license is for Non-profit use only) 29/06/2019 11:53 AM
+		</div>
+	</body>
+</html>

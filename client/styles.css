@@ -1,0 +1,203 @@
+/***
+	Main CSS file
+*/
+
+	@font-face	{
+		font-family: "pier";
+		src: url('PierSans-FreeForPersonalUse/PierSans-Regular.otf');
+	}
+
+	body	{
+		font-family: "Arial";
+		margin-left: 10%;
+		margin-right: 10%;
+		margin-top: 5%;
+		font-family: "pier";
+	}
+	
+	.center	{
+		text-align: center;
+	}
+	
+	.title	{
+		font-size: 0.75in;
+	}
+	
+	div img.hideImg	{
+		margin-left: calc(100% - 50px);
+		cursor: pointer;
+		transition: transform 0.75s;
+		-webkit-transition: transform 0.5s;
+	}
+	
+	div img.hideImg:hover	{
+		transform: rotate(45deg);
+	}
+	
+	#search_input	{
+		width: 40%;
+		padding: 20px;
+		font-size: 20px;
+	}
+	
+	input[type=button]	{
+		font-size: 20px;
+		padding: 20px;
+		border: 0;
+	}
+	
+	input.blue	{
+		background-color: rgb(65,105,225);
+		color: white;
+	}
+	
+	input.green	{
+		background-color: rgb(34,139,34);
+		color: white;
+	}
+
+	input.blue2	{
+		background-color: rgb(35,85,120);
+		color: white;
+	}
+
+	input.blue3	{
+		background-color: rgb(19,47,87);
+		color: white;
+	}
+
+	input.blue4	{
+		background-color: rgb(23,47,73);
+		color: white;	
+	}
+	
+	#message	{
+		padding: 0px;
+		border-left: solid green 5px;
+		background-color: lightgreen;
+		width: 50%;
+		opacity: 0;
+		overflow: hidden;
+		max-height: 0px;
+		transition: opacity 1s, max-height 1s;
+		-webkit-transition: opacity 1s, max-height 1s;
+	}
+	
+	#add_item, #settings	{
+		border-left: solid black 5px;
+		background-color: rgb(230, 230, 230);
+		padding: 0px;
+		width: 50%;
+		opacity: 0;
+		overflow: hidden;
+		max-height: 0px;
+		transition: opacity 1s, max-height 1s;
+		-webkit-transition: opacity 1s, max-height 1s;
+	}
+	
+	.delete_image, .edit_image, .jump_image	{
+		width: 40px;
+		cursor: pointer;
+		/*filter: grayscale(100%);*/
+		transition: filter 1s;
+	}
+	
+	.delete_image:hover, .edit_image:hover	{
+		width: 40px;
+		cursor: pointer;
+		/*filter: grayscale(0%);*/
+		transition: filter 1s;
+	}
+	
+	.cool_input	{
+		padding: 10px;
+	}
+	
+	table {
+	  border-collapse: collapse;
+	  font-family: "Arial";
+	  width: 100%;
+	}
+
+	th, td {
+	  padding: 10px;
+	  text-align: center;
+	}
+
+	tr:nth-child(even){background-color: #f2f2f2}
+
+	th {
+	  background-color: rgb(19,47,87)/*#4CAF50*/;
+	  color: white;
+	}
+	
+	#search_result	{
+		border-left: solid black 5px;
+		background-color: rgb(230, 230, 230);
+		padding: 0px;
+		width: 70%;
+		opacity: 0;
+		overflow: hidden;
+		max-height: 0px;
+		transition: opacity 1s, max-height 1s;
+		-webkit-transition: opacity 1s, max-height 1s;		
+	}
+	
+	.navigator	input[type=button]{
+		font-family: "pier"!important;
+		background-color: transparent;
+		border-bottom: solid lightgray 5px;
+		transition: border-color 1.5s, background-color 1s, color 1s;
+		-webkit-transition: border-color 1.5s, background-color 1s, color 1s;
+	}
+	
+	.navigator	input[type=button]:hover{
+		background-color: rgb(19,47,87)/*rgb(34, 139, 34)*/;
+		color: white;
+	}
+	
+	.tab	{
+		width: 80%;
+		opacity: 0;
+		overflow: hidden;
+		max-height: 0px;
+		transition: opacity 1s, max-height 1s;
+		-webkit-transition: opacity 1s, max-height 1s;
+	}
+	
+	table tr td input	{
+		padding: 15px;
+	}
+
+	@media only screen and (max-width: 1150px) {
+
+		#search_input {
+		  width: 100%;
+		}
+
+		#search_button, #add_button, #set_button	{
+			width: 100%;
+		}
+
+		#all_articles, #sold_articles	{
+			width: 100%;
+		}
+
+		#settings, #add_item, #search_result, #message	{
+			width: calc(100% - 45px);
+		}
+
+		th, td	{
+			padding: 10px;
+		}
+	}
+
+	@media only screen and (max-width: 750px)	{
+		.title	{
+			font-size: 0.5in;
+		}
+	}
+	
+	
+	
+	
