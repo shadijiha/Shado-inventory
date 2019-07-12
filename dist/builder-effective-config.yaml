@@ -1,0 +1,8 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.shado.inventory
+win:
+  target: nsis
+  icon: assets/icons/win/icon.ico
+electronVersion: 5.0.6
